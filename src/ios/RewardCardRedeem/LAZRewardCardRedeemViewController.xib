@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9rounded" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LAZRewardCardRedeemViewController" customModule="learningazquizroom" customModuleProvider="target">
+            <connections>
+                <outlet property="messageLabel" destination="r2y-Ht-Mcw" id="NbS-rw-bVl"/>
+                <outlet property="rewardCardCodeTextField" destination="dur-Cd-fAn" id="7tq-xV-zT0"/>
+                <outlet property="scanQrCodeButton" destination="aUS-pN-x0T" id="5mG-45-9tf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starZoneBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="xSC-O1-aI6">
+                    <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ytF-89-btP">
+                    <rect key="frame" x="20" y="44" width="1326" height="940"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e0K-kb-bde">
+                            <rect key="frame" x="418" y="0.0" width="490" height="66"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Code          " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dur-Cd-fAn">
+                                    <rect key="frame" x="0.0" y="0.0" width="322" height="66"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQ5-sn-PEm">
+                                    <rect key="frame" x="330" y="0.0" width="160" height="66"/>
+                                    <color key="backgroundColor" red="0.4548753847" green="0.72269809740000002" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                    <state key="normal" title="Redeem">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="redeemButtonTapped:" destination="-1" eventType="touchUpInside" id="khh-AX-Hnb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUS-pN-x0T">
+                            <rect key="frame" x="547" y="454" width="232" height="57"/>
+                            <color key="backgroundColor" red="0.4548753847157293" green="0.72269809737564183" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                            <state key="normal" title="Scan QR Code">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="scanQrCodeButtonTapped:" destination="-1" eventType="touchUpInside" id="myz-8M-jJB"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the QR code or input the code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2y-Ht-Mcw">
+                            <rect key="frame" x="406" y="899" width="514.5" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xSC-O1-aI6" secondAttribute="bottom" id="0az-Lv-cZ9"/>
+                <constraint firstItem="ytF-89-btP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Is7-Q9-JQx"/>
+                <constraint firstItem="xSC-O1-aI6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LLJ-FW-K1C"/>
+                <constraint firstItem="xSC-O1-aI6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WcJ-cU-E6r"/>
+                <constraint firstItem="xSC-O1-aI6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Y27-QN-TGl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ytF-89-btP" secondAttribute="bottom" constant="20" id="fYB-Ky-5yj"/>
+                <constraint firstItem="ytF-89-btP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="pfJ-bA-Cpg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ytF-89-btP" secondAttribute="trailing" constant="20" id="sEk-gS-KIk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="680.81991215226935" y="65.625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="starZoneBg.png" width="1024" height="1024"/>
+    </resources>
+</document>
